@@ -1,0 +1,123 @@
+Create Table passenger (
+PassengerId int Primary KEY, 
+passengername varChar(50), 
+email varChar(50) 
+);
+Create Table buyer (
+buyerId int Primary KEY 
+);
+Create Table flightCompany(
+ flightCompanyId int Primary KEY, 
+ flightCompanyName varChar(30), 
+ webSite varChar(30) 
+);
+
+Create Table travelAgent(
+ travelAgentId int Primary KEY, 
+ travelAgentName varChar(30), 
+ phone varChar(20), 
+ bookingCompany varChar(30) 
+);
+
+Create Table flight ( 
+ flightNumber int, 
+ flightDate DATE, 
+ departureHr varChar (30), 
+ arrivalHr varChar(30), 
+ airplaneId int, 
+ airportId varChar(30), 
+ flightWay varChar (10), 
+ Primary key (flightNumber , flightDate),
+ foreign key (airportId) 
+ references airport(airportId), 
+ foreign key (airplaneId) 
+ references airplane(airplaneId) 
+);
+
+Create Table Purchase_Ticket_PurchaseOf( 
+ PurchaseDate DATE Primary KEY, 
+ ticketNumber varChar(30), 
+ price varChar(30), 
+ seatClass varChar(10), 
+ flightCompanyName varChar(30), 
+ passengername varChar(50), 
+ buyerId int, 
+ flightNumber int, 
+ foreign key (buyerId) 
+ references Buyer(buyerId), 
+ foreign key (flightNumber) 
+ references flight(flightNumber) 
+);
+
+Create Table airport (
+	airportId int Primary key,
+	airportName varChar(30),
+	yearOfbulding varChar(5),
+	city varChar(30)
+
+);
+Create Table airplane ( 
+ airplaneId int Primary key, 
+ airplaneType varChar(30), 
+ airplaneYearOfmanufacutre varChar(5), 
+ airplaneSize varChar(30), 
+ airportId int, 
+ foreign key (airportId) 
+ references airport(airportId) 
+);
+
+Create Table employee( 
+ ssn varChar(30) Primary key, 
+ dateOfBirth date, 
+ hiringDate date, 
+ salary varChar(30), 
+ employeeName varChar(50), 
+ airportId int, 
+ foreign key (airportId) 
+ references airport(airportId) 
+);
+
+Create Table dependent ( 
+ dependentName varChar(30), 
+ ssn varChar(30), 
+ sex varChar (6),  
+ dateOfBirth date, 
+ relationShip varChar(10), 
+ Primary key ( dependentName , ssn ), 
+ foreign key (ssn) 
+ references employee(ssn) 
+);
+
+Create Table workFor( 
+ ssn varChar(30) Primary key, 
+ department varChar(30), 
+ foreign key (ssn) 
+ references employee(ssn) 
+);
+
+Create Table airHostes ( 
+ ssn varChar(30) Primary key, 
+ sex varChar(6), 
+ airplaneId int, 
+ foreign key (ssn) 
+ references employee (ssn), 
+ foreign key (airplaneId) 
+ references airplane(airplaneId) 
+);
+Create Table pilot ( 
+ ssn varChar(30) Primary key, 
+ military_civilian varChar(10), 
+ foreign key (ssn) 
+ references employee(ssn) 
+);
+
+Create Table drive ( 
+ pilotSSN varChar(30), 
+ airplaneId int,
+ Primary key( pilotSSN , airplaneId ), 
+ foreign key (pilotSSN) 
+ references pilot(ssn), 
+ foreign key (airplaneId) 
+ references airplane(airplaneId) 
+);
+

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AirPortDB</string>
+    <string name="title_activity_data_base">DataBase</string>
+</resources>

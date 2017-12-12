@@ -1,0 +1,68 @@
+select distinct city  
+ from airport as a , flight as b 
+ where  a.airportId = b.airportId  
+ and airplaneId = 10 
+  ;
+
+select distinct airportName 
+ from airplane as a , airport as b 
+ where a.airportId = b.airportId and airplaneType = 'civil'
+;
+select count(*)                                   
+  from flightcompany as f , purchase_Ticket_PurchaseOf as p 
+  where  f.flightCompanyId = p.buyerId
+  
+ ; 
+select travelAgentName,Phone,bookingCompany                  
+from travelAgent as t , Purchase_Ticket_PurchaseOf as p 
+  where t.travelAgentId = p.buyerId
+  and ticketNumber = 40
+;
+
+select relationship,ssn as e_ssn,name as depen_name    
+  from dependent as d , employee as e
+  where e.ssn = d.ssn
+  and salary > 6000
+;
+select employeeName , department                           
+  from workFor as w , employee as e
+  where w.ssn = e.ssn
+  and e.salary > 4500
+group by department
+;
+select average(price)                            
+ from buyer as b , Purchase_Ticket_PurchaseOf as p  
+  where  b.id = p.buyerId
+  and buyerId = 30
+;
+select buyerId                                  
+  from buyer as b , Purchase_Ticket_PurchaseOf as p 
+  where b.id = p.buyerId
+  having sum(price)>15000
+;
+select passengername,email                      
+  from passenger as p , Purchase_Ticket_PurchaseOf as pp
+  where p.PassengerId = pp.buyerId
+  and seatClass='A'
+
+
+;
+
+select flightDate                                       
+from flight f
+where f.flightNumber in(
+    select ptp.flightNumber 
+    from  Purchase_Ticket_PurchaseOf ptp,passenger p
+    where  ptp.buyerId=p.PassengerId
+      and passengername='joesmith')
+;
+    select ssn                                        
+ from airHostes h
+where h.airplanId in(
+    select ptp.airplanId
+    from  airport a,airplan p
+    where  a.airportId=p.airportId
+      and city='paris')                                                             
+
+
+

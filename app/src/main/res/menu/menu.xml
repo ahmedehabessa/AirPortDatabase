@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:menuCategory="alternative">
+
+        <item
+            android:id="@+id/menu_passenger"
+            android:orderInCategory="1"
+            android:title="passenger"
+            android:checked="true"
+
+            />
+
+        <item
+            android:id="@+id/menu_flightCompany"
+            android:orderInCategory="2"
+            android:title="flightCompany"
+
+            />
+
+        <item
+            android:id="@+id/menu_travelAgent"
+            android:orderInCategory="3"
+            android:title="travelAgent"
+
+            />
+        <item
+            android:id="@+id/menu_Purchase_Ticket_PurchaseOf"
+            android:orderInCategory="4"
+            android:title="Purchase_Ticket_PurchaseOf"
+
+            />
+        <item
+            android:id="@+id/menu_flight"
+            android:orderInCategory="5"
+            android:title="flight"
+
+            />
+        <item
+            android:id="@+id/menu_airport"
+            android:orderInCategory="6"
+            android:title="airport"
+
+            />
+        <item
+            android:id="@+id/menu_airplane"
+            android:orderInCategory="7"
+            android:title="airplane"
+
+            />
+        <item
+            android:id="@+id/menu_employee"
+            android:orderInCategory="8"
+            android:title="employee"
+
+            />
+        <item
+            android:id="@+id/menu_dependent"
+            android:orderInCategory="9"
+            android:title="dependent"
+
+            />
+        <item
+            android:id="@+id/menu_workFor"
+            android:orderInCategory="10"
+            android:title="workFor"
+
+            />
+        <item
+            android:id="@+id/menu_airHostes"
+            android:orderInCategory="11"
+            android:title="airHostes"
+
+            />
+
+        <item
+            android:id="@+id/menu_pilot"
+            android:orderInCategory="12"
+            android:title="pilot"
+
+            />
+
+        <item
+            android:id="@+id/menu_drive"
+            android:orderInCategory="13"
+            android:title="drive"
+
+            />
+
+        <item
+            android:id="@+id/menu_buyer"
+            android:orderInCategory="14"
+            android:title="byer"
+
+            />
+    </group>
+</menu>

@@ -1,0 +1,100 @@
+
+
+
+
+
+/******************table buyer************************/
+insert into buyer values (1);
+insert into buyer values (2);
+insert into buyer values (3);
+insert into buyer values (4);
+insert into buyer values (5);
+insert into buyer values (6);
+insert into buyer values (7);
+insert into buyer values (8);
+insert into buyer values (9);
+insert into buyer values (10);
+
+
+/********************table passenger****************/
+insert into passenger values (1,'joesmith','joesmith@gmail.com');
+insert into passenger values (2,'alansmith','alansmith@gmail.com');
+insert into passenger values (3,'richard','richard@gmail.com');
+insert into passenger values (4,'khaledsalah','khaledsalah@gmail.com');
+insert into passenger values (5,'ahmedehab','ahmedehab@gmail.com');
+
+/*********************Flightcompany**************************************/
+insert into Flightcompany values (6,'delta','www.delta.com');
+insert into Flightcompany values (7,'westtours','www.westtours.com');
+insert into Flightcompany values (8,'southtours','www.southtours.com');
+
+
+/***************************travelAgent*******************************/
+insert into travelAgent values (9,'tamer','98765432','delta');
+insert into travelAgent values (10,'nader','98765431','southtours');
+
+
+/****************************Purchase_Ticket_PurchaseOf**************/
+
+insert into Purchase_Ticket_PurchaseOf values ('10/1/2017','1','9500','A','joesmith','southtours','1','1');
+insert into Purchase_Ticket_PurchaseOf values ('10/2/2017','2','8500','A','alansmith','delta','2','1');
+insert into Purchase_Ticket_PurchaseOf values ('11/3/2017','3','9500','A','joesmith','westtours','1','2');
+insert into Purchase_Ticket_PurchaseOf values ('14/7/2017','4','10500','A','khaledsalah','southtours','4','2');
+insert into Purchase_Ticket_PurchaseOf values ('12/3/2017','5','4500','B','ahmedehab','delta','5','2');
+insert into Purchase_Ticket_PurchaseOf values ('11/7/2017','6','4300','B','joesmith','westtours','1','3');
+insert into Purchase_Ticket_PurchaseOf values ('25/4/2017','7','4200','B','alansmith','delta','2','1');
+insert into Purchase_Ticket_PurchaseOf values ('20/6/2017','8','4500','B','alansmith','southtours','2','3');
+insert into Purchase_Ticket_PurchaseOf values ('4/3/2017','9','3500','C','alansmith','southtours','2','2');
+insert into Purchase_Ticket_PurchaseOf values ('7/1/2017','10','2500','C','richard','delta','3','1');
+insert into Purchase_Ticket_PurchaseOf values ('9/1/2017','11','2400','C','richard','westtours','3','2');
+insert into Purchase_Ticket_PurchaseOf values ('10/11/2017','12','4500','B','richard','delta','3','3');
+
+
+/*********************************flight*********************/
+
+insert into flight values (1,'10/1/2017','2','4','1','1','flightway=??');
+insert into flight values (2,'10/1/2017','8','12','1','2','flightway=??');
+insert into flight values (3,'12/1/2017','1','6','2','1','flightway=??');
+
+
+/*********************************************airport****************************/
+insert into airport values (1,'egypto','10/1/1954','cairo');
+insert into airport values (2,'chinaon','10/1/1987','honkong');
+insert into airport values (3,'charlesdegaules','10/1/1960','paris');
+insert into airport values (4,'munchin','10/1/1977','munchin');
+
+/*********************************************airplane***************************/
+insert into airplane values (1,'civil','10/1/1952','200','1');
+insert into airplane values (2,'civil','10/1/1950','300','2');
+insert into airplane values (3,'civil','10/1/1938','250','1');
+
+/********************************************employee****************************/
+insert into employee values ('111111111','10/1/1950','10/1/1999','4500','salim','1');
+insert into employee values ('222222222','10/1/1952','10/1/2001','6500','nader','1');
+insert into employee values ('333333333','10/1/1958','10/7/2002','8500','medhat','2');
+insert into employee values ('444444444','10/1/1978','10/1/2005','9500','nourhan','3');
+
+/********************************************Dependent******************************/
+insert into dependent values ('mohamed','111111111','male','10/1/1999','son');
+insert into dependent values ('mostafa','222222222','male','10/1/1991','son');
+insert into dependent values ('menna', '333333333','female','10/1/1995','daughter');
+
+/*********************************************workFor**********************************/
+insert into workFor values ('111111111',1);
+insert into workFor values ('222222222',1);
+insert into workFor values ('333333333',2);
+insert into workFor values ('444444444',2);
+
+
+/*********************************************airHostes:**************************************/
+insert into airHostes values ('111111111','male','1');
+insert into airHostes values ('222222222','male','1');
+
+/*********************************************pilot*****************************************/
+insert into pilot values ('333333333','civil');
+insert into pilot values ('444444444','civil');
+
+/******************************************drive**********************************************/
+insert into drive values ('333333333','1');
+insert into drive values ('333333333','2');
+insert into drive values ('444444444','3');
